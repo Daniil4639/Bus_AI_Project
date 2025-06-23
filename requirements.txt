@@ -3,3 +3,4 @@ mediapipe~=0.10.21
 numpy~=1.26.4
 ultralytics~=8.3.146
 pillow~=11.2.1
+sqlalchemy~=2.0.41
