@@ -4,7 +4,7 @@ from tkinter import filedialog, ttk
 from PIL import Image, ImageTk
 import cv2
 
-from processors.image_processor import ImageProcessor
+from src.core import ImageProcessor
 
 
 class StylishImageViewerApp:
