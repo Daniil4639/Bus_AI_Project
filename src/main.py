@@ -1,6 +1,6 @@
 import cv2
 
-from processors.image_processor import ImageProcessor
+from src.core.image_processor import ImageProcessor
 
 processor = ImageProcessor()
 
