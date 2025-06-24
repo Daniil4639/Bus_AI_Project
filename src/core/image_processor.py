@@ -9,7 +9,7 @@ class ImageProcessor(object):
 
     def __init__(self):
         self.pose_detector = PoseDetector()
-        self.object_detector = ObjectDetector()
+        self.object_detector = ObjectDetectorForCPU()
         self.output_processor = OutputImageProcessor()
 
     def __call__(self, image):
