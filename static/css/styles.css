@@ -1301,3 +1301,97 @@ header h1 {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
+/* Добавляем в существующий CSS стили для системы безопасности водителя */
+
+/* Стили для предупреждений и положительных детекций */
+.detection-item.warning-item {
+    border-left: 4px solid #dc3545;
+    background: #fff5f5;
+}
+
+.detection-item.positive-item {
+    border-left: 4px solid #28a745;
+    background: #f8fff8;
+}
+
+.detection-type.warning-type {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.detection-type.positive-type {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.detection-icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.warning-message {
+    color: #dc3545;
+    font-weight: 500;
+    font-style: italic;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Улучшения для статистики безопасности */
+.safety-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.safety-stat-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    border-left: 4px solid #007bff;
+}
+
+.safety-stat-card.warning {
+    border-left-color: #dc3545;
+}
+
+.safety-stat-card.positive {
+    border-left-color: #28a745;
+}
+
+.safety-stat-title {
+    font-size: 11px;
+    color: #6c757d;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.safety-stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.safety-stat-card.warning .safety-stat-value {
+    color: #dc3545;
+}
+
+.safety-stat-card.positive .safety-stat-value {
+    color: #28a745;
+}
+
+/* Анимации для предупреждений */
+@keyframes warningPulse {
+    0% { background-color: #fff5f5; }
+    50% { background-color: #ffe6e6; }
+    100% { background-color: #fff5f5; }
+}
+
+.detection-item.warning-item.new-warning {
+    animation: warningPulse 2s ease-in-out 3;
+}

@@ -1,0 +1,14 @@
+2025-06-25 14:45:19 - camera_monitoring - WARNING - Не удалось загрузить нейронную сеть: No module named 'ultralytics'
+2025-06-25 14:45:19 - camera_monitoring - WARNING - Будет использован режим эмуляции
+2025-06-25 14:45:19 - camera_monitoring - INFO - Проверка окружения для работы с 25 FPS...
+2025-06-25 14:45:19 - camera_monitoring - INFO - Проверка окружения завершена
+2025-06-25 14:45:20 - camera_monitoring - WARNING - Не удалось загрузить нейронную сеть: No module named 'ultralytics'
+2025-06-25 14:45:20 - camera_monitoring - WARNING - Будет использован режим эмуляции
+2025-06-25 14:45:20 - camera_monitoring - INFO - Запуск приложения...
+2025-06-25 14:45:20 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-25 14:45:20 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-25 14:45:20 - camera_monitoring - WARNING - Нейронная сеть недоступна, используется режим эмуляции
+2025-06-25 14:45:20 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-25 14:45:27 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-25 14:45:27 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-25 14:45:27 - camera_monitoring - INFO - Приложение завершено
