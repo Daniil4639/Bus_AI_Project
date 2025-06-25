@@ -591,7 +591,131 @@ class CameraMonitoringApp {
             console.log('Конфигурация системы:', configData);
         }
     }
-    
+
+    // Добавляем в существующий файл JavaScript новые методы для отображения данных о безопасности водителя
+
+    // В метод updateDetectionResults добавляем специальную обработку предупреждений
+    updateDetectionResults(recentData) {
+        console.log('Обновление результатов детекции:', recentData ? recentData.length : 0, 'записей');
+        
+        if (!this.elements.detectionList) return;
+        
+        if (!recentData || recentData.length === 0) {
+            this.elements.detectionList.innerHTML = `
+                <div class="empty-state">
+                    <i>🔍</i>
+                    <h3>Нет результатов анализа</h3>
+                    <p>Результаты анализа безопасности водителя будут отображаться здесь</p>
+                </div>
+            `;
+            return;
+        }
+        
+        this.elements.detectionList.innerHTML = '';
+        
+        // Показать только последние результаты с объектами
+        const resultsWithObjects = recentData.filter(item => {
+            const detectionResults = this.parseDetectionResults(item.detection_results);
+            return detectionResults && detectionResults.length > 0;
+        }).slice(0, 5);
+        
+        if (resultsWithObjects.length === 0) {
+            this.elements.detectionList.innerHTML = `
+                <div class="empty-state">
+                    <i>✅</i>
+                    <h3>Водитель соблюдает правила безопасности</h3>
+                    <p>Нарушений не обнаружено</p>
+                </div>
+            `;
+            return;
+        }
+        
+        resultsWithObjects.forEach(item => {
+            const detectionResults = this.parseDetectionResults(item.detection_results);
+            
+            detectionResults.forEach(detection => {
+                try {
+                    const detectionDiv = document.createElement('div');
+                    const isWarning = this.isWarningDetection(detection.object_type);
+                    detectionDiv.className = `detection-item fade-in ${isWarning ? 'warning-item' : 'positive-item'}`;
+                    
+                    const confidence = detection.confidence || 0;
+                    let confidenceClass = 'low';
+                    if (confidence > 0.8) confidenceClass = 'high';
+                    else if (confidence > 0.6) confidenceClass = 'medium';
+                    
+                    const objectType = detection.object_type || 'unknown';
+                    const displayName = this.getDisplayName(objectType);
+                    const icon = this.getDetectionIcon(objectType);
+                    const bbox = detection.bbox || [];
+                    const timestamp = detection.timestamp || item.timestamp;
+                    
+                    detectionDiv.innerHTML = `
+                        <div class="detection-item-header">
+                            <span class="detection-icon">${icon}</span>
+                            <span class="detection-type ${isWarning ? 'warning-type' : 'positive-type'}">${displayName}</span>
+                            <span class="detection-confidence ${confidenceClass}">
+                                ${(confidence * 100).toFixed(1)}%
+                            </span>
+                        </div>
+                        <div class="detection-details">
+                            ${detection.warning_message ? `<span class="warning-message">${detection.warning_message}</span>` : ''}
+                            <span>Время: ${new Date(timestamp).toLocaleTimeString('ru-RU')}</span>
+                            ${bbox.length > 0 ? `<span>Область: [${bbox.join(', ')}]</span>` : ''}
+                        </div>
+                    `;
+                    
+                    this.elements.detectionList.appendChild(detectionDiv);
+                } catch (error) {
+                    console.error('Ошибка обработки детекции:', error, detection);
+                }
+            });
+        });
+    }
+
+    // Вспомогательные методы для обработки данных безопасности водителя
+    isWarningDetection(objectType) {
+        const warningTypes = [
+            'belt_not_detected', 'wheel_not_detected', 'hands_not_on_wheel', 
+            'objects_in_hands', 'driver_not_detected', 'cell_phone', 'cup', 'bottle'
+        ];
+        return warningTypes.includes(objectType);
+    }
+
+    getDisplayName(objectType) {
+        const displayNames = {
+            'driver_detected': 'Водитель обнаружен',
+            'safety_belt': 'Ремень безопасности',
+            'steering_wheel': 'Рулевое колесо',
+            'belt_not_detected': 'Ремень не пристегнут',
+            'wheel_not_detected': 'Руль не обнаружен',
+            'hands_not_on_wheel': 'Руки не на руле',
+            'objects_in_hands': 'Предмет в руках',
+            'driver_not_detected': 'Водитель не обнаружен',
+            'cell_phone': 'Телефон в руках',
+            'cup': 'Чашка в руках',
+            'bottle': 'Бутылка в руках'
+        };
+        return displayNames[objectType] || objectType;
+    }
+
+    getDetectionIcon(objectType) {
+        const icons = {
+            'driver_detected': '👨‍✈️',
+            'safety_belt': '🔒',
+            'steering_wheel': '🚗',
+            'belt_not_detected': '⚠️',
+            'wheel_not_detected': '❌',
+            'hands_not_on_wheel': '🙌',
+            'objects_in_hands': '📱',
+            'driver_not_detected': '❓',
+            'cell_phone': '📱',
+            'cup': '☕',
+            'bottle': '🍼'
+        };
+        return icons[objectType] || '🔍';
+    }
+        
     formatUptime(seconds) {
         const hours = Math.floor(seconds / 3600);
         const minutes = Math.floor((seconds % 3600) / 60);
@@ -1121,127 +1245,3 @@ window.addEventListener('offline', () => {
         window.app.showNotification('Соединение с сетью потеряно', 'warning');
     }
 });
-
-// Добавляем в существующий файл JavaScript новые методы для отображения данных о безопасности водителя
-
-// В метод updateDetectionResults добавляем специальную обработку предупреждений
-updateDetectionResults(recentData) {
-    console.log('Обновление результатов детекции:', recentData ? recentData.length : 0, 'записей');
-    
-    if (!this.elements.detectionList) return;
-    
-    if (!recentData || recentData.length === 0) {
-        this.elements.detectionList.innerHTML = `
-            <div class="empty-state">
-                <i>🔍</i>
-                <h3>Нет результатов анализа</h3>
-                <p>Результаты анализа безопасности водителя будут отображаться здесь</p>
-            </div>
-        `;
-        return;
-    }
-    
-    this.elements.detectionList.innerHTML = '';
-    
-    // Показать только последние результаты с объектами
-    const resultsWithObjects = recentData.filter(item => {
-        const detectionResults = this.parseDetectionResults(item.detection_results);
-        return detectionResults && detectionResults.length > 0;
-    }).slice(0, 5);
-    
-    if (resultsWithObjects.length === 0) {
-        this.elements.detectionList.innerHTML = `
-            <div class="empty-state">
-                <i>✅</i>
-                <h3>Водитель соблюдает правила безопасности</h3>
-                <p>Нарушений не обнаружено</p>
-            </div>
-        `;
-        return;
-    }
-    
-    resultsWithObjects.forEach(item => {
-        const detectionResults = this.parseDetectionResults(item.detection_results);
-        
-        detectionResults.forEach(detection => {
-            try {
-                const detectionDiv = document.createElement('div');
-                const isWarning = this.isWarningDetection(detection.object_type);
-                detectionDiv.className = `detection-item fade-in ${isWarning ? 'warning-item' : 'positive-item'}`;
-                
-                const confidence = detection.confidence || 0;
-                let confidenceClass = 'low';
-                if (confidence > 0.8) confidenceClass = 'high';
-                else if (confidence > 0.6) confidenceClass = 'medium';
-                
-                const objectType = detection.object_type || 'unknown';
-                const displayName = this.getDisplayName(objectType);
-                const icon = this.getDetectionIcon(objectType);
-                const bbox = detection.bbox || [];
-                const timestamp = detection.timestamp || item.timestamp;
-                
-                detectionDiv.innerHTML = `
-                    <div class="detection-item-header">
-                        <span class="detection-icon">${icon}</span>
-                        <span class="detection-type ${isWarning ? 'warning-type' : 'positive-type'}">${displayName}</span>
-                        <span class="detection-confidence ${confidenceClass}">
-                            ${(confidence * 100).toFixed(1)}%
-                        </span>
-                    </div>
-                    <div class="detection-details">
-                        ${detection.warning_message ? `<span class="warning-message">${detection.warning_message}</span>` : ''}
-                        <span>Время: ${new Date(timestamp).toLocaleTimeString('ru-RU')}</span>
-                        ${bbox.length > 0 ? `<span>Область: [${bbox.join(', ')}]</span>` : ''}
-                    </div>
-                `;
-                
-                this.elements.detectionList.appendChild(detectionDiv);
-            } catch (error) {
-                console.error('Ошибка обработки детекции:', error, detection);
-            }
-        });
-    });
-}
-
-// Вспомогательные методы для обработки данных безопасности водителя
-isWarningDetection(objectType) {
-    const warningTypes = [
-        'belt_not_detected', 'wheel_not_detected', 'hands_not_on_wheel', 
-        'objects_in_hands', 'driver_not_detected', 'cell_phone', 'cup', 'bottle'
-    ];
-    return warningTypes.includes(objectType);
-}
-
-getDisplayName(objectType) {
-    const displayNames = {
-        'driver_detected': 'Водитель обнаружен',
-        'safety_belt': 'Ремень безопасности',
-        'steering_wheel': 'Рулевое колесо',
-        'belt_not_detected': 'Ремень не пристегнут',
-        'wheel_not_detected': 'Руль не обнаружен',
-        'hands_not_on_wheel': 'Руки не на руле',
-        'objects_in_hands': 'Предмет в руках',
-        'driver_not_detected': 'Водитель не обнаружен',
-        'cell_phone': 'Телефон в руках',
-        'cup': 'Чашка в руках',
-        'bottle': 'Бутылка в руках'
-    };
-    return displayNames[objectType] || objectType;
-}
-
-getDetectionIcon(objectType) {
-    const icons = {
-        'driver_detected': '👨‍✈️',
-        'safety_belt': '🔒',
-        'steering_wheel': '🚗',
-        'belt_not_detected': '⚠️',
-        'wheel_not_detected': '❌',
-        'hands_not_on_wheel': '🙌',
-        'objects_in_hands': '📱',
-        'driver_not_detected': '❓',
-        'cell_phone': '📱',
-        'cup': '☕',
-        'bottle': '🍼'
-    };
-    return icons[objectType] || '🔍';
-}
