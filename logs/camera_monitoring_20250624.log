@@ -1,0 +1,269 @@
+2025-06-24 17:11:11 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:11:11 - camera_monitoring - ERROR - Ошибка подключения к базе данных: [Errno 111] Connection refused
+2025-06-24 17:11:11 - camera_monitoring - ERROR - Ошибка при запуске приложения: [Errno 111] Connection refused
+2025-06-24 17:11:11 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:11:11 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:11:59 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:11:59 - camera_monitoring - ERROR - Ошибка подключения к базе данных: [Errno 111] Connection refused
+2025-06-24 17:11:59 - camera_monitoring - ERROR - Ошибка при запуске приложения: [Errno 111] Connection refused
+2025-06-24 17:11:59 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:11:59 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:17:20 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:17:20 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:17:20 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:17:20 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:17:20 - camera_monitoring - INFO - Приложение успешно запущено
+2025-06-24 17:17:25 - camera_monitoring - INFO - Получено 0 записей из базы данных
+2025-06-24 17:17:36 - camera_monitoring - INFO - Получено 0 записей из базы данных
+2025-06-24 17:17:43 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:17:43 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:17:43 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:18:19 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:18:20 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:18:20 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:18:20 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:18:20 - camera_monitoring - INFO - Приложение успешно запущено
+2025-06-24 17:18:23 - camera_monitoring - INFO - Получено 0 записей из базы данных
+2025-06-24 17:18:39 - camera_monitoring - ERROR - Не удалось подключиться к камере
+2025-06-24 17:19:06 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:19:06 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:19:06 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:19:17 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:19:17 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:19:17 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:19:18 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:19:18 - camera_monitoring - INFO - Приложение успешно запущено
+2025-06-24 17:19:18 - camera_monitoring - INFO - Получено 0 записей из базы данных
+2025-06-24 17:19:24 - camera_monitoring - INFO - Камера успешно подключена: rtsp://admin:admin@192.168.1.107:554/live.sdp
+2025-06-24 17:19:24 - camera_monitoring - INFO - WebSocket добавлен, всего подключений: 1
+2025-06-24 17:19:25 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:25 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 1
+2025-06-24 17:19:26 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:26 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 2
+2025-06-24 17:19:27 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:27 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 3
+2025-06-24 17:19:28 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:28 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 4
+2025-06-24 17:19:29 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:29 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 5
+2025-06-24 17:19:30 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:30 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 6
+2025-06-24 17:19:35 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:35 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 7
+2025-06-24 17:19:36 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:36 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 8
+2025-06-24 17:19:37 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:37 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 9
+2025-06-24 17:19:38 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:38 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 10
+2025-06-24 17:19:39 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:39 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 11
+2025-06-24 17:19:40 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:40 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 12
+2025-06-24 17:19:41 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:41 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 13
+2025-06-24 17:19:42 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:42 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 14
+2025-06-24 17:19:43 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:43 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 15
+2025-06-24 17:19:44 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:44 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 16
+2025-06-24 17:19:45 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:45 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 17
+2025-06-24 17:19:46 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:46 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 18
+2025-06-24 17:19:47 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:47 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 19
+2025-06-24 17:19:48 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:48 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 20
+2025-06-24 17:19:51 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 21
+2025-06-24 17:19:52 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:52 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 22
+2025-06-24 17:19:53 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 23
+2025-06-24 17:19:54 - camera_monitoring - ERROR - Ошибка обновления статистики: there is no unique or exclusion constraint matching the ON CONFLICT specification
+2025-06-24 17:19:54 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 24
+2025-06-24 17:19:54 - camera_monitoring - INFO - WebSocket удален, всего подключений: 0
+2025-06-24 17:19:54 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:19:54 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:19:54 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:21:15 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:21:15 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:21:15 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:21:15 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:21:15 - camera_monitoring - INFO - Приложение успешно запущено
+2025-06-24 17:21:18 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:19 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:21 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:25 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:34 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:35 - camera_monitoring - INFO - Получено 24 записей из базы данных
+2025-06-24 17:21:40 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:21:40 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:21:40 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:24:51 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:24:51 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:24:51 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:24:51 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:24:51 - camera_monitoring - INFO - Приложение успешно запущено
+2025-06-24 17:25:12 - camera_monitoring - INFO - Камера успешно подключена: rtsp://admin:admin@192.168.1.107:554/live.sdp
+2025-06-24 17:25:12 - camera_monitoring - INFO - Разрешение кадра: 1920x1080
+2025-06-24 17:25:12 - camera_monitoring - INFO - WebSocket добавлен, всего подключений: 1
+2025-06-24 17:25:16 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 25
+2025-06-24 17:25:16 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 26
+2025-06-24 17:25:16 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 27
+2025-06-24 17:25:17 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 28
+2025-06-24 17:25:18 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 29
+2025-06-24 17:25:19 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 30
+2025-06-24 17:25:20 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 31
+2025-06-24 17:25:21 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 32
+2025-06-24 17:25:22 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 33
+2025-06-24 17:25:23 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 34
+2025-06-24 17:25:24 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 35
+2025-06-24 17:25:25 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 36
+2025-06-24 17:25:26 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 37
+2025-06-24 17:25:27 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 38
+2025-06-24 17:25:28 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 39
+2025-06-24 17:25:29 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 40
+2025-06-24 17:25:30 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 41
+2025-06-24 17:25:31 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 42
+2025-06-24 17:25:31 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 17:25:31 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 17:25:32 - camera_monitoring - INFO - WebSocket удален, всего подключений: 0
+2025-06-24 17:25:53 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:25:53 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:25:53 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:29:57 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:29:57 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:29:57 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:29:58 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:29:58 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-24 17:30:25 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:30:25 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:30:25 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:36:14 - camera_monitoring - INFO - Проверка окружения для работы с 25 FPS...
+2025-06-24 17:36:14 - camera_monitoring - INFO - Проверка окружения завершена
+2025-06-24 17:36:15 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:36:15 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:36:15 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:36:15 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:36:15 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-24 17:40:06 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:40:06 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:40:06 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:41:51 - camera_monitoring - INFO - Проверка окружения для работы с 25 FPS...
+2025-06-24 17:41:51 - camera_monitoring - INFO - Проверка окружения завершена
+2025-06-24 17:41:52 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:41:52 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:41:52 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:41:52 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:41:52 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-24 17:43:26 - camera_monitoring - INFO - Камера подключена: rtsp://admin:admin@192.168.1.107:554/live.sdp
+2025-06-24 17:43:26 - camera_monitoring - INFO - Параметры: 1920x1080 @ 25.0 FPS
+2025-06-24 17:43:26 - camera_monitoring - INFO - Анализ: каждые 1.0 сек (примерно каждый 25 кадр)
+2025-06-24 17:43:26 - camera_monitoring - INFO - Запуск обработки: анализ каждого 25-го кадра
+2025-06-24 17:43:41 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 43
+2025-06-24 17:43:53 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 17:43:53 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 45
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 44
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 46
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 47
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 49
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 50
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 53
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 51
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 55
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 58
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 48
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 54
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 52
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 56
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 64
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 57
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 65
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 59
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 60
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 61
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 62
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 63
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 67
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 66
+2025-06-24 17:43:53 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 68
+2025-06-24 17:46:51 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 17:46:51 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 17:46:51 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 17:48:16 - camera_monitoring - INFO - Проверка окружения для работы с 25 FPS...
+2025-06-24 17:48:16 - camera_monitoring - INFO - Проверка окружения завершена
+2025-06-24 17:48:18 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 17:48:18 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 17:48:18 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 17:48:18 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 17:48:18 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-24 18:16:03 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 18:16:03 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 18:16:03 - camera_monitoring - INFO - Приложение завершено
+2025-06-24 18:34:06 - camera_monitoring - INFO - Проверка окружения для работы с 25 FPS...
+2025-06-24 18:34:06 - camera_monitoring - INFO - Проверка окружения завершена
+2025-06-24 18:34:07 - camera_monitoring - INFO - Запуск приложения...
+2025-06-24 18:34:07 - camera_monitoring - INFO - Таблицы базы данных созданы успешно
+2025-06-24 18:34:07 - camera_monitoring - INFO - Подключение к базе данных успешно установлено
+2025-06-24 18:34:07 - camera_monitoring - INFO - Модель нейронной сети успешно инициализирована
+2025-06-24 18:34:07 - camera_monitoring - INFO - Приложение успешно запущено (режим анализа)
+2025-06-24 18:34:14 - camera_monitoring - INFO - Камера подключена: rtsp://admin:admin@192.168.1.107:554/live.sdp
+2025-06-24 18:34:14 - camera_monitoring - INFO - Параметры: 1920x1080 @ 25.0 FPS
+2025-06-24 18:34:14 - camera_monitoring - INFO - Анализ: каждые 1.0 сек (примерно каждый 25 кадр)
+2025-06-24 18:34:14 - camera_monitoring - INFO - Запуск обработки: анализ каждого 25-го кадра
+2025-06-24 18:34:35 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 69
+2025-06-24 18:34:35 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 70
+2025-06-24 18:34:44 - camera_monitoring - INFO - Статистика: 25.5 FPS получено, 0.97 анализов/сек
+2025-06-24 18:34:47 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 72
+2025-06-24 18:34:47 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 71
+2025-06-24 18:34:47 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 75
+2025-06-24 18:34:47 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 74
+2025-06-24 18:34:49 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 73
+2025-06-24 18:34:49 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 76
+2025-06-24 18:34:49 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 77
+2025-06-24 18:34:49 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 78
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 79
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 81
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 80
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 83
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 84
+2025-06-24 18:34:51 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 82
+2025-06-24 18:35:01 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 18:35:01 - camera_monitoring - INFO - Камера остановлена
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 85
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 86
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 87
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 94
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 95
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 92
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 93
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 91
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 90
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 89
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 88
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 101
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 103
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 106
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 98
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 97
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 99
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 100
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 102
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 104
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 105
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 111
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 108
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 96
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 113
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 107
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 112
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 109
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 110
+2025-06-24 18:35:01 - camera_monitoring - INFO - Результаты нейронной сети сохранены с ID: 114
+2025-06-24 18:36:00 - camera_monitoring - INFO - Завершение работы приложения...
+2025-06-24 18:36:00 - camera_monitoring - INFO - Пул соединений с базой данных закрыт
+2025-06-24 18:36:00 - camera_monitoring - INFO - Приложение завершено

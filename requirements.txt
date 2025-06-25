@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+asyncpg
+opencv-python
+numpy
+python-multipart
+jinja2
+aiofiles
+websockets
+python-dotenv

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система мониторинга IP камер - 25 FPS</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🎥 Система мониторинга IP камер</h1>
+                <p class="header-subtitle">Анализ видеопотока 25 FPS с использованием нейронных сетей</p>
+            </div>
+            <div class="status-panel">
+                <div class="status-item">
+                    <span class="status-label">Статус камеры</span>
+                    <span id="camera-status" class="status-value">
+                        <span class="status-indicator status-inactive"></span>
+                        Отключена
+                    </span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Режим работы</span>
+                    <span class="status-value">25 FPS Анализ</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Эффективность</span>
+                    <span id="efficiency-status" class="status-value">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="tab-navigation">
+            <button class="tab-button active" onclick="openTab(event, 'camera-tab')">
+                📹 Управление камерой
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'database-tab')">
+                📊 База данных
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'performance-tab')">
+                ⚡ Производительность
+            </button>
+        </nav>
+
+        <main>
+            <!-- Вкладка управления камерой -->
+            <div id="camera-tab" class="tab-content active">
+                <div class="camera-section">
+                    <div class="camera-controls">
+                        <div class="control-buttons">
+                            <button id="start-camera" class="btn btn-primary">
+                                ▶️ Запустить анализ (25 FPS)
+                            </button>
+                            <button id="stop-camera" class="btn btn-secondary">
+                                ⏹️ Остановить анализ
+                            </button>
+                            <button id="restart-camera" class="btn btn-warning">
+                                🔄 Перезапустить
+                            </button>
+                        </div>
+                        <div class="camera-info">
+                            <p class="info-text">
+                                <strong>Настройки:</strong> 1920x1080 @ 25 FPS | Анализ каждую секунду
+                            </p>
+                            <p class="info-text">
+                                <strong>Режим:</strong> Оптимизированный анализ для высокочастотного потока
+                            </p>
+                            <div class="camera-stats">
+                                <!-- Статистика камеры будет добавлена динамически -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-status">
+                        <h3>📊 Статус анализа в реальном времени</h3>
+                        <div class="status-grid">
+                            <div class="status-card">
+                                <div class="status-card-title">Получено кадров</div>
+                                <div id="frames-received" class="status-card-value">0</div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-card-title">Проанализировано</div>
+                                <div id="frames-analyzed" class="status-card-value">0</div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-card-title">Текущий FPS</div>
+                                <div id="current-fps" class="status-card-value">0</div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-card-title">Анализов/сек</div>
+                                <div id="analysis-rate" class="status-card-value">0</div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-card-title">Время работы</div>
+                                <div id="uptime" class="status-card-value">00:00:00</div>
+                            </div>
+                            <div class="status-card">
+                                <div class="status-card-title">Ошибки</div>
+                                <div id="error-count" class="status-card-value">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detection-results">
+                        <h3>🔍 Последние результаты детекции</h3>
+                        <div id="detection-list" class="detection-items">
+                            <div class="empty-state">
+                                <i>🔍</i>
+                                <h3>Нет результатов детекции</h3>
+                                <p>Результаты анализа будут отображаться здесь</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка производительности -->
+            <div id="performance-tab" class="tab-content">
+                <div class="performance-section">
+                    <div class="performance-controls">
+                        <div class="control-buttons">
+                            <button id="refresh-performance" class="btn btn-primary">
+                                📈 Обновить статистику
+                            </button>
+                            <button id="reset-stats" class="btn btn-warning">
+                                🔄 Сбросить счетчики
+                            </button>
+                        </div>
+                        <div class="performance-info">
+                            <p class="info-text">
+                                <strong>Мониторинг:</strong> Производительность системы анализа 25 FPS
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="performance-stats">
+                        <h3>⚡ Производительность системы</h3>
+                        <div class="performance-grid">
+                            <div class="perf-card">
+                                <div class="perf-title">Средний FPS</div>
+                                <div id="avg-fps" class="perf-value">0</div>
+                                <div class="perf-target">Цель: 25 FPS</div>
+                            </div>
+                            <div class="perf-card">
+                                <div class="perf-title">Эффективность анализа</div>
+                                <div id="analysis-efficiency" class="perf-value">0%</div>
+                                <div class="perf-target">Цель: >90%</div>
+                            </div>
+                            <div class="perf-card">
+                                <div class="perf-title">Кадров на анализ</div>
+                                <div id="frames-per-analysis" class="perf-value">0</div>
+                                <div class="perf-target">Ожидается: ~25</div>
+                            </div>
+                            <div class="perf-card">
+                                <div class="perf-title">Процент ошибок</div>
+                                <div id="error-rate" class="perf-value">0%</div>
+                                <div class="perf-target">Цель: <5%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recommendations">
+                        <h3>💡 Рекомендации по оптимизации</h3>
+                        <div id="recommendations-list" class="recommendations-list">
+                            <div class="empty-state">
+                                <i>💡</i>
+                                <h3>Загрузка рекомендаций...</h3>
+                                <p>Анализ производительности системы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вкладка базы данных -->
+            <div id="database-tab" class="tab-content">
+                <div class="database-section">
+                    <div class="database-controls">
+                        <div class="control-buttons">
+                            <button id="refresh-data" class="btn btn-primary">
+                                🔄 Обновить данные
+                            </button>
+                            <button id="cleanup-data" class="btn btn-warning">
+                                🗑️ Очистить старые данные
+                            </button>
+                        </div>
+                        <div class="database-info">
+                            <p class="info-text">
+                                <strong>Показано:</strong> Последние 50 записей из базы данных
+                            </p>
+                            <small>Данные обновляются автоматически каждые 10 секунд</small>
+                        </div>
+                    </div>
+
+                    <div class="database-stats">
+                        <h3>📈 Статистика базы данных</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-title">Всего записей</div>
+                                <div id="total-records" class="stat-value">0</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-title">Размер БД</div>
+                                <div id="db-size" class="stat-value">Неизвестно</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-title">Последняя активность</div>
+                                <div id="last-activity" class="stat-value">Нет данных</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-table-container">
+                        <table id="database-table" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>🕐 Время анализа</th>
+                                    <th>🎯 Обнаруженные объекты</th>
+                                    <th>📊 Статистика</th>
+                                </tr>
+                            </thead>
+                            <tbody id="database-tbody">
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="empty-state">
+                                            <div class="spinner"></div>
+                                            <p>Загрузка данных...</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>© 2024 Система мониторинга IP камер | Версия 1.0.0 (Оптимизация для 25 FPS)</p>
+                <div class="footer-links">
+                    <a href="/health" target="_blank">Состояние системы</a>
+                    <span>|</span>
+                    <a href="/api/camera/performance" target="_blank">Производительность</a>
+                    <span>|</span>
+                    <a href="#" onclick="app.showNotification('Система оптимизирована для работы с камерами 25 FPS', 'info')">О системе</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
