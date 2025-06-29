@@ -13,6 +13,9 @@ class Settings:
     """Настройки приложения"""
     
     def __init__(self):
+        self.frames_dir = os.getenv("FRAMES_DIR", "frames")
+        self.results_dir = os.getenv("RESULTS_DIR", "results")
+
         # База данных
         self.database_url: str = os.getenv(
             "DATABASE_URL", 

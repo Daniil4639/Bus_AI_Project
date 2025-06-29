@@ -125,11 +125,13 @@ class NeuralNetworkService:
         
         try:
             # Сохраняем кадр во временный файл для обработки
-            temp_image_path = "/tmp/temp_frame.jpg"
-            cv2.imwrite(temp_image_path, frame)
+            # temp_image_path = "/tmp/temp_frame.jpg"
+            # cv2.imwrite(temp_image_path, frame)
             
+            frame_path = save_frame(frame)
+
             # Обработка вашей нейросетью
-            warnings, image_with_boxes = analyze_image(self.processor, temp_image_path)
+            warnings, image_with_boxes = analyze_image(self.processor, frame_path)
             
             current_time = datetime.now().isoformat()
             frame_height, frame_width = frame.shape[:2]
@@ -188,10 +190,10 @@ class NeuralNetworkService:
                 })
             
             # Очищаем временный файл
-            try:
-                Path(temp_image_path).unlink()
-            except:
-                pass
+            # try:
+            #     Path(temp_image_path).unlink()
+            # except:
+            #     pass
                 
         except Exception as e:
             logger.error(f"Ошибка в обработке реальной нейросетью: {e}")
